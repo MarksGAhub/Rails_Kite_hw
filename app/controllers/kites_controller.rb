@@ -12,5 +12,15 @@ end
         @kite = Kite.new
     end
 
+def create
+    @kite = Kite.new(params.require(:kite). permit(:name, :size, :quantity))
+
+        if @kite.save
+            redirect_to kites_path
+        else
+            render "new"
+        end
+    end
+
 
 end

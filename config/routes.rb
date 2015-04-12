@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 get "kites/"  => "kites#index"
-get "kites/:id" => "kites#show", as: :kite
 get "kites/new" => "kites#new", as: :new_kite
+get "kites/:id" => "kites#show", as: :kite
+post "kites/" => "kites#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
