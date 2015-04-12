@@ -8,5 +8,9 @@ end
         @kite = Kite.find(params[ :id ])
     end
 
+    def new
+        @kite = Kite.new
+    end
+
 
 end

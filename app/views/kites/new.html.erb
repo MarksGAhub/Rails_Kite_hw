@@ -1,0 +1,13 @@
+<h1> Add a new kite! </h1>
+
+<%= form_for @kite do |f| %>
+
+    Name: <%= f.text_field :name %>
+    Size: <%= f.text_field :size %>
+    Quantity: <%= f.text_field :quantity %>
+
+    <%= f.submit "Add the kite!" %>
+
+    <% end %>
+
+    <%= link_to "Back to the list!", kites_path %>
