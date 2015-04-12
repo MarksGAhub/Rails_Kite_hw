@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-kite = Kites.create([
+kite = Kite.create([
     {name: "Red Diamond", size: "Small", quantity: 20},
     {name: "Fighter Jet", size: "Large", quantity: 30}
     ])
