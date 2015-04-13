@@ -22,5 +22,25 @@ def create
         end
     end
 
+def edit
+    @kite = Kite.find(params[ :id ])
+end
+
+ def update
+    @kite = Kite.find(params[ :id ])
+
+    if @kite.update_attributes(params.require(:kite).permit(:name, :size, :quantity))
+        redirect_to kites_path
+    else
+        render "edit"
+    end
+end
+
+def destroy
+    @kite = Kite.find(params[ :id ])
+    @kite.destroy
+    redirect_to kites_path
+end
+
 
 end

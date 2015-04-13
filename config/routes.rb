@@ -3,6 +3,9 @@ get "kites/"  => "kites#index"
 get "kites/new" => "kites#new", as: :new_kite
 get "kites/:id" => "kites#show", as: :kite
 post "kites/" => "kites#create"
+get "kites/:id/edit" => "kites#edit", as: :edit_kite
+patch "kites/:id" => "kites#update"
+delete "kites/:id" => "kites#destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -16,7 +19,7 @@ post "kites/" => "kites#create"
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+    resources :products
 
   # Example resource route with options:
   #   resources :products do

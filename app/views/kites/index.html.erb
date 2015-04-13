@@ -3,8 +3,10 @@
 
     <%  @kites.each do |kite| %>
     <li>
-        <strong> <%= kite.name  %> </strong> -- <%= kite.size  %>
+    <!-- Be sure to remember to add the hashrocket to get the attributes to show properly. -->
+        <strong> <%= kite.name  %> </strong> - <%= kite.size  %> - <%= kite.quantity %>
 
+<%= link_to "More info", kite_path(kite) %>
     </li>
 
     <%  end  %>
